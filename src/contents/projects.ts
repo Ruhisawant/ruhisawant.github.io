@@ -1,4 +1,4 @@
-import { Project } from '@/types'
+import { Project } from '@/types' //may be able to delete
 
 export const projects: Project[] = [
   {

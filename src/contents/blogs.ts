@@ -1,4 +1,4 @@
-import { Blog } from '@/types'
+import { Blog } from '@/types'  //may be able to delete
 
 export const blogs: Blog[] = [
   {

@@ -1,13 +1,13 @@
 'use client'
-import React, { useState } from 'react'
+import React, { use } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Bars3Icon, MoonIcon, SunIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import { i } from 'framer-motion/client'
+import { useTheme } from '../context/ThemeContext'
 
 const Navbar = () => {
-  const theme = 'dark'
-  const [ismobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false)
+  const {theme, toggleTheme} = useTheme()
+  const [ismobileMenuOpen, setMobileMenuOpen] = React.useState<boolean>(false)
   const pathname = usePathname()
 
   const toggleMobileMenu = () => {
@@ -23,7 +23,7 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className='fixed w-full bg-dark/80 backdrop-blur-sm z-50'>
+    <nav className='fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-700 shadow-sm transition-colors'>
       <div className='container max-w-7xl mx-auto px-4'>
         {/* Desktop View */}
         <div className='flex items-center justify-between h-16'>
@@ -36,7 +36,7 @@ const Navbar = () => {
                 <Link key={item.name} href={item.href} className={`hover:text-primary transition-colors font-medium ${isActive ? 'text-primary' : ''}`}>{item.name}</Link>
               )
             })}
-            <button className='p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-white hover:text-primary transition-colors cursor-pointer'>
+            <button onClick={toggleTheme} className='p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-white hover:text-primary transition-colors cursor-pointer'>
               {theme === 'dark' ? (
                 <SunIcon className='w-5 h-5'/>
               ) : (
@@ -62,7 +62,7 @@ const Navbar = () => {
                 </div>
               ))}
               <div className=''>
-                <button className='flex items-center py-2 hover:text-primary transition-colors cursor-pointer'>
+                <button onClick={toggleTheme} className='flex items-center py-2 hover:text-primary transition-colors cursor-pointer'>
                   {theme === 'dark' ? (
                     <><SunIcon className='w-5 h-5 mr-2'/>Light Mode</>
                   ) : (
