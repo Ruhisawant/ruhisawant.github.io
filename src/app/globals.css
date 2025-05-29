@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --color-primary: #007AFF;
@@ -6,14 +6,15 @@
   --color-dark: #1F2937;
   --color-light: #F9FAFB;
   --color-text: #000000;
-  --color-bg: #ffffff;
+  /* --color-bg: #ffffff; */
 
+  --color-bg: #000319;
+  
   --font-sans: 'Inter', sans-serif;
 
   --animation-fade-in: fadeIn 0.5s ease-in-out;
   --animation-slide-up: slideUp 0.5s ease-in-out;
 }
-
 
 @custom-variant dark (&:where(.dark, .dark *));
 
