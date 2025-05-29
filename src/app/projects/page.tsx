@@ -1,10 +1,10 @@
 'use client'
 
-import { projects } from '@/contents/projects'
+import { projects } from '@/src/contents/projects'
 import Image from 'next/image'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import { motion } from 'framer-motion'
-import { fadeInUp, staggerContainer, cardHoverSmall } from '@/utils/animations'
+import { fadeInUp, staggerContainer, cardHoverSmall } from '@/src/utils/animations'
 
 export default function Projects() {
   return (
@@ -76,7 +76,7 @@ export default function Projects() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
               >
-                {project.technologies.map((tech, techIndex) => (
+                {project.technologies.map((tech: string, techIndex: number) => (
                   <motion.span
                     key={techIndex}
                     className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
@@ -123,4 +123,4 @@ export default function Projects() {
       </motion.div>
     </div>
   )
-} 
+}
