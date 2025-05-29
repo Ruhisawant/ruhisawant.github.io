@@ -65,4 +65,4 @@ export const projects: Project[] = [
     demoLink: 'https://demo.com',
     image: '/projects/expense-tracker.webp',
   }
-];
+]
