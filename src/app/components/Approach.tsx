@@ -15,7 +15,7 @@ export default function Approach() {
           <Card 
             title='Planning & Strategy' 
             icon={<AceternityIcon order='Phase 1'/>}
-            description="We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, content strategy, and user experience."
+            description='We&apos;ll collaborate to map out your website&apos;s goals, target audience, and key functionalities. We&apos;ll discuss things like site structure, content strategy, and user experience.'
           >
             <CanvasRevealEffect animationSpeed={5.1} containerClassName='bg-emerald-900'/>
           </Card>
@@ -29,7 +29,7 @@ export default function Approach() {
           <Card 
             title='Development & Launch'
             icon={<AceternityIcon order='Phase 3'/>}
-            description="This is where the magic happens! Based on the approved design, I'll translate everything into functional code, building your website from the ground up."
+            description='This is where the magic happens! Based on the approved design, I&apos;ll translate everything into functional code, building your website from the ground up.'
           >
             <CanvasRevealEffect animationSpeed={3} containerClassName='bg-sky-600' colors={[[125, 211, 252]]}/>
           </Card>
