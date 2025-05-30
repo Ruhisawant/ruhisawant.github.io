@@ -4,10 +4,10 @@ import Approach from './components/Approach'
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
       <Projects />
       <Approach />
-    </main>
+    </>
   )
 }
