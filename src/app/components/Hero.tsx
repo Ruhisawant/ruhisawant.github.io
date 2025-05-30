@@ -1,5 +1,4 @@
 'use client'
-
 import Link from 'next/link'
 import MagicButton from './ui/MagicButton'
 import { motion } from 'framer-motion'

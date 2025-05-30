@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { ThemeProvider } from './context/ThemeContext'
 import { FloatingNavbar } from './components/ui/FloatingNavbar'
+import { ThemeToggle } from './components/ui/ThemeToggle'
 import { FaHome, FaUser, FaProjectDiagram, FaEnvelope } from 'react-icons/fa'
 import './globals.css'
 
@@ -40,6 +41,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <ThemeToggle />
         </ThemeProvider>
       </body>
     </html>

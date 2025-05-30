@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-
 import { AnimatePresence, motion } from 'motion/react'
 import { CanvasRevealEffect } from '@/src/app/components/ui/CanvasRevealEffect'
 import { fadeInUp, staggerContainer } from '@/src/utils/animations'
