@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import { cn } from '@/src/utils/cn'
 import { Spotlight } from './ui/Spotlight'
 import { FaLocationArrow } from 'react-icons/fa'
-import { fadeInUp } from '@/src/utils/animations'
+import { fadeInUp, staggerContainer } from '@/src/utils/animations'
 
 export default function Hero() {
   return (
@@ -35,11 +35,7 @@ export default function Hero() {
       />
 
       {/* Main Content */}
-      <motion.div 
-        className='container max-w-4xl mx-auto px-6 relative z-10'
-        initial='initial'
-        animate='animate'
-      >
+      <motion.div className='container max-w-4xl mx-auto px-6 relative z-10' variants={staggerContainer} initial='initial' animate='animate'>
         <div className='text-center space-y-8'>
           {/* Main Heading */}
           <motion.div variants={fadeInUp} transition={{ duration: 0.6 }}>
