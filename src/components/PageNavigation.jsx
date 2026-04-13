@@ -1,5 +1,6 @@
 import { atom, useAtom } from "jotai";
 import { useEffect } from "react";
+import { LogoMenuBar } from "./LogoMenuBar";
 
 const pictures = [
   "about-me-cover",
@@ -57,11 +58,7 @@ export const PageNavigation = () => {
   return (
     <main className="pointer-events-none select-none z-10 fixed inset-0 flex justify-between flex-col">
       {/* Logo */}
-      <img 
-        className="w-20 pointer-events-auto mt-10 ml-10" 
-        src="/background/logo.png" 
-        alt="Logo"
-      />
+      <LogoMenuBar />
 
       {/* Page Navigation Buttons */}
       <div className="w-full overflow-auto pointer-events-auto flex justify-center">
