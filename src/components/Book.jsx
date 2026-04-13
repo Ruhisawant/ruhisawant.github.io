@@ -108,14 +108,14 @@ function createPageMaterials(frontTexture, backTexture) {
     new MeshStandardMaterial({
       color: edgeColor,
       map: frontTexture,
-      roughness: 0.5,
+      roughness: 0.35,
       emissive: emissiveColor,
       emissiveIntensity: 0,
     }),
     new MeshStandardMaterial({
       color: edgeColor,
       map: backTexture,
-      roughness: 0.5,
+      roughness: 0.35,
       emissive: emissiveColor,
       emissiveIntensity: 0,
     }),

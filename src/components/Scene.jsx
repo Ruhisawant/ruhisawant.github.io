@@ -19,7 +19,7 @@ export const Scene = () => {
       <OrbitControls enableZoom={false} />
 
       {/* Environment Lighting Preset */}
-      <Environment preset="studio" />
+      <Environment preset="apartment" />
 
       {/* Primary Directional Light with Shadow Casting */}
       <directionalLight
